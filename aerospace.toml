@@ -1,12 +1,6 @@
 # Colleen's AeroSpace config, based closely on the setup shared by her friend.
 config-version = 2
 
-[exec]
-inherit-env-vars = true
-
-[exec.env-vars]
-PATH = '/opt/homebrew/bin:/opt/homebrew/sbin:${PATH}'
-
 after-startup-command = [
     'exec-and-forget sketchybar',
     'exec-and-forget borders hidpi=on active_color=0xff7fbfff inactive_color=0xff494d64 width=5.0',
@@ -176,6 +170,7 @@ run = ['layout floating']
 
 # Refresh SketchyBar whenever a window appears
 [[on-window-detected]]
+if = 'true'
 run = [
     'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar --trigger aerospace_workspace_change',
 ]
