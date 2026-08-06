@@ -143,6 +143,10 @@ run = ['move-node-to-workspace P']
 if.app-name-regex-substring = 'Notion'
 run = ['move-node-to-workspace O']
 
+[[on-window-detected]]
+if.app-id = 'com.apple.iWork.Pages'
+run = ['move-node-to-workspace O']
+
 # Supporting apps
 [[on-window-detected]]
 if.app-name-regex-substring = 'Linear'
@@ -175,9 +179,9 @@ run = [
     'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar --trigger aerospace_workspace_change',
 ]
 
-# Keep the friend's multi-monitor behavior.
+# Multi-monitor layout: comms/music on the small screen, Zoom on the main one.
 [workspace-to-monitor-force-assignment]
-4 = ['secondary', 'built-in']
+4 = 'main'
 7 = ['secondary', 'built-in']
 8 = ['secondary', 'built-in']
 9 = ['secondary', 'built-in']

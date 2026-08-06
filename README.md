@@ -62,7 +62,7 @@ anything below.
 | `alt-1`     | 1         | Linear                       |
 | `alt-2`     | 2         | —                             |
 | `alt-3`     | 3         | —                             |
-| `alt-4`     | 4         | Zoom                          |
+| `alt-4`     | 4         | Zoom (main monitor)           |
 | `alt-5`     | 5         | —                             |
 | `alt-6`     | 6         | —                             |
 | `alt-7`     | 7         | Slack                         |
@@ -70,7 +70,7 @@ anything below.
 | `alt-9`     | 9         | Spotify                       |
 | `alt-i`     | I         | Terminal (Ghostty) + Cursor   |
 | `alt-m`     | M         | —                             |
-| `alt-o`     | O         | Notion                        |
+| `alt-o`     | O         | Notion + Pages (notes)        |
 | `alt-p`     | P         | Browser (Chrome)              |
 | `alt-u`     | U         | —                             |
 
