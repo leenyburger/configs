@@ -13,6 +13,11 @@ brew install --cask nikitabobko/tap/aerospace
 brew install FelixKratz/formulae/sketchybar
 brew install FelixKratz/formulae/borders
 
+# SF Pro isn't available by name to SketchyBar without installing it, even
+# though it's Apple's system typeface — without it the SF Symbols icons
+# (battery, volume) render as question-mark boxes.
+brew install --cask font-sf-pro
+
 # Best-effort: this font makes front_app's icons render, but the bar works
 # fine without it (front_app.sh degrades to plain text automatically).
 brew install --cask font-sketchybar-app-font || true
