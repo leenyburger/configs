@@ -3,94 +3,256 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AeroSpace Config</title>
+<title>AeroSpace + SketchyBar cheat sheet</title>
 <style>
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;max-width:960px;margin:40px auto;padding:0 20px;background:#f7f7f8;color:#1f2328}
-pre{white-space:pre-wrap;word-break:break-word;background:#111827;color:#f9fafb;padding:24px;border-radius:12px;font:14px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
-button{padding:10px 14px;border:0;border-radius:8px;font-weight:600;cursor:pointer;margin-bottom:14px}
+  :root {
+    --base: #1e1e2e;
+    --mantle: #181825;
+    --crust: #11111b;
+    --text: #cdd6f4;
+    --subtext1: #bac2de;
+    --subtext0: #a6adc8;
+    --surface0: #313244;
+    --surface1: #45475a;
+    --surface2: #585b70;
+    --overlay0: #6c7086;
+    --blue: #89b4fa;
+    --lavender: #b4befe;
+    --green: #a6e3a1;
+    --yellow: #f9e2af;
+    --peach: #fab387;
+    --red: #f38ba8;
+    --mauve: #cba6f7;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 48px 24px 80px;
+    background: var(--base);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+    line-height: 1.5;
+  }
+
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 28px;
+    margin: 0 0 6px;
+    color: var(--text);
+  }
+
+  .subtitle {
+    color: var(--subtext0);
+    margin: 0 0 24px;
+    font-size: 15px;
+  }
+
+  .note {
+    background: var(--surface0);
+    border-left: 3px solid var(--blue);
+    color: var(--subtext1);
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
+  .note code, p code, td code, li code {
+    background: var(--surface1);
+    color: var(--lavender);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.9em;
+  }
+
+  .note a, p a {
+    color: var(--blue);
+  }
+
+  h2 {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--subtext0);
+    margin: 40px 0 12px;
+    border-bottom: 1px solid var(--surface0);
+    padding-bottom: 8px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--mantle);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 10px 14px;
+    font-size: 14px;
+    border-bottom: 1px solid var(--surface0);
+  }
+
+  th {
+    color: var(--subtext0);
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    background: var(--crust);
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  td:first-child {
+    white-space: nowrap;
+  }
+
+  kbd {
+    display: inline-block;
+    background: var(--surface1);
+    color: var(--lavender);
+    border: 1px solid var(--surface2);
+    border-bottom-width: 2px;
+    border-radius: 5px;
+    padding: 2px 7px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 12.5px;
+  }
+
+  .pill {
+    display: inline-block;
+    padding: 2px 9px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--base);
+  }
+
+  .pill.service { background: var(--peach); }
+  .pill.workspace { background: var(--blue); }
+
+  footer {
+    margin-top: 48px;
+    color: var(--overlay0);
+    font-size: 13px;
+    text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    th, td { padding: 8px 10px; font-size: 13px; }
+  }
 </style>
 </head>
 <body>
-<h1>AeroSpace starter config</h1>
-<p>Copy everything below into <code>~/.aerospace.toml</code>.</p>
-<button onclick="navigator.clipboard.writeText(document.getElementById('cfg').innerText);this.innerText='Copied!'">Copy config</button>
-<pre id="cfg">config-version = 2
+<div class="wrap">
+  <h1>AeroSpace + SketchyBar</h1>
+  <p class="subtitle">Keyboard cheat sheet for this Mac's window-management setup.</p>
 
-start-at-login = true
+  <div class="note">
+    The actual configuration lives in <a href="https://github.com/leenyburger/configs" target="_blank" rel="noopener">this repo</a>
+    &mdash; see <code>aerospace.toml</code>, <code>sketchybar/</code>, and <code>README.md</code>.
+    This page is a static reference only; edit the repo files, not this page, to change behavior.
+  </div>
 
-enable-normalization-flatten-containers = true
-enable-normalization-opposite-orientation-for-nested-containers = true
+  <h2>Focus / Move</h2>
+  <table>
+    <thead><tr><th>Keys</th><th>Action</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>alt</kbd> <kbd>h/j/k/l</kbd></td><td>Focus left / down / up / right</td></tr>
+      <tr><td><kbd>alt</kbd> <kbd>shift</kbd> <kbd>h/j/k/l</kbd></td><td>Move window left / down / up / right</td></tr>
+    </tbody>
+  </table>
 
-default-root-container-layout = 'tiles'
-default-root-container-orientation = 'auto'
+  <h2>Layout</h2>
+  <table>
+    <thead><tr><th>Keys</th><th>Action</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>alt</kbd> <kbd>/</kbd></td><td>Tiles layout (horizontal / vertical)</td></tr>
+      <tr><td><kbd>alt</kbd> <kbd>,</kbd></td><td>Accordion layout</td></tr>
+      <tr><td><kbd>alt</kbd> <kbd>f</kbd></td><td>Toggle floating / tiling</td></tr>
+      <tr><td><kbd>alt</kbd> <kbd>shift</kbd> <kbd>f</kbd></td><td>Toggle fullscreen</td></tr>
+    </tbody>
+  </table>
 
-accordion-padding = 30
+  <h2>Resize</h2>
+  <table>
+    <thead><tr><th>Keys</th><th>Action</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>alt</kbd> <kbd>-</kbd></td><td>Shrink window</td></tr>
+      <tr><td><kbd>alt</kbd> <kbd>=</kbd></td><td>Grow window</td></tr>
+    </tbody>
+  </table>
 
-automatically-unhide-macos-hidden-apps = true
+  <h2>Workspaces</h2>
+  <table>
+    <thead><tr><th>Keys</th><th>Workspace</th><th>Lives here</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>alt</kbd> <kbd>1</kbd></td><td><span class="pill workspace">1</span></td><td>Linear</td></tr>
+      <tr><td><kbd>alt</kbd> <kbd>2</kbd></td><td><span class="pill workspace">2</span></td><td>&mdash;</td></tr>
+      <tr><td><kbd>alt</kbd> <kbd>3</kbd></td><td><span class="pill workspace">3</span></td><td>&mdash;</td></tr>
+      <tr><td><kbd>alt</kbd> <kbd>4</kbd></td><td><span class="pill workspace">4</span></td><td>Zoom</td></tr>
+      <tr><td><kbd>alt</kbd> <kbd>5</kbd></td><td><span class="pill workspace">5</span></td><td>&mdash;</td></tr>
+      <tr><td><kbd>alt</kbd> <kbd>6</kbd></td><td><span class="pill workspace">6</span></td><td>&mdash;</td></tr>
+      <tr><td><kbd>alt</kbd> <kbd>7</kbd></td><td><span class="pill workspace">7</span></td><td>Slack</td></tr>
+      <tr><td><kbd>alt</kbd> <kbd>8</kbd></td><td><span class="pill workspace">8</span></td><td>Claude</td></tr>
+      <tr><td><kbd>alt</kbd> <kbd>9</kbd></td><td><span class="pill workspace">9</span></td><td>Spotify</td></tr>
+      <tr><td><kbd>alt</kbd> <kbd>i</kbd></td><td><span class="pill workspace">I</span></td><td>Terminal (Ghostty) + Cursor</td></tr>
+      <tr><td><kbd>alt</kbd> <kbd>m</kbd></td><td><span class="pill workspace">M</span></td><td>&mdash;</td></tr>
+      <tr><td><kbd>alt</kbd> <kbd>o</kbd></td><td><span class="pill workspace">O</span></td><td>Notion</td></tr>
+      <tr><td><kbd>alt</kbd> <kbd>p</kbd></td><td><span class="pill workspace">P</span></td><td>Browser (Chrome)</td></tr>
+      <tr><td><kbd>alt</kbd> <kbd>u</kbd></td><td><span class="pill workspace">U</span></td><td>&mdash;</td></tr>
+    </tbody>
+  </table>
+  <p style="color: var(--subtext0); font-size: 13.5px; margin-top: 10px;">
+    <kbd>alt</kbd> <kbd>shift</kbd> + a workspace key moves the focused window
+    to that workspace instead of switching to it.
+  </p>
 
-[key-mapping]
-preset = 'qwerty'
+  <table style="margin-top: 16px;">
+    <thead><tr><th>Keys</th><th>Action</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>alt</kbd> <kbd>tab</kbd></td><td>Workspace back-and-forth</td></tr>
+      <tr><td><kbd>alt</kbd> <kbd>shift</kbd> <kbd>tab</kbd></td><td>Move current workspace to the next monitor</td></tr>
+    </tbody>
+  </table>
 
-[gaps]
-inner.horizontal = 0
-inner.vertical = 0
-outer.left = 0
-outer.bottom = 0
-outer.top = 0
-outer.right = 0
+  <h2>Service mode <span class="pill service">SERVICE</span></h2>
+  <table>
+    <thead><tr><th>Keys</th><th>Action</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>alt</kbd> <kbd>shift</kbd> <kbd>;</kbd></td><td>Enter service mode</td></tr>
+      <tr><td><kbd>esc</kbd></td><td>Reload config, back to main mode</td></tr>
+      <tr><td><kbd>r</kbd></td><td>Flatten workspace tree, back to main mode</td></tr>
+      <tr><td><kbd>f</kbd></td><td>Toggle floating / tiling, back to main mode</td></tr>
+      <tr><td><kbd>b</kbd></td><td>Balance window sizes, back to main mode</td></tr>
+      <tr><td><kbd>backspace</kbd></td><td>Close all windows but current, back to main mode</td></tr>
+      <tr><td><kbd>alt</kbd> <kbd>shift</kbd> <kbd>h/j/k/l</kbd></td><td>Join with left / down / up / right, back to main mode</td></tr>
+    </tbody>
+  </table>
+  <p style="color: var(--subtext0); font-size: 13.5px; margin-top: 10px;">
+    While in service mode, SketchyBar shows a <span class="pill service">SERVICE</span>
+    pill so it's obvious the keyboard is in a different mode.
+  </p>
 
-[mode.main.binding]
+  <div class="note" style="margin-top: 40px;">
+    <strong>Note:</strong> <code>alt</code>-based bindings shadow macOS's special-character
+    input (e.g. <code>option-8</code> normally types &ldquo;&bull;&rdquo;) &mdash; that
+    tradeoff is intentional here. Raycast (<kbd>cmd</kbd> <kbd>space</kbd>) and Whisper
+    Flow (<kbd>fn</kbd>) hotkeys don't conflict with anything above.
+  </div>
 
-# Layout
-alt-slash = 'layout tiles horizontal vertical'
-alt-comma = 'layout accordion horizontal vertical'
-alt-f = 'layout floating tiling'
-
-# Focus (Vim)
-alt-h = 'focus left'
-alt-j = 'focus down'
-alt-k = 'focus up'
-alt-l = 'focus right'
-
-# Move windows
-alt-shift-h = 'move left'
-alt-shift-j = 'move down'
-alt-shift-k = 'move up'
-alt-shift-l = 'move right'
-
-# Resize
-alt-minus = 'resize smart -50'
-alt-equal = 'resize smart +50'
-
-# Workspaces
-alt-1 = 'workspace 1'
-alt-2 = 'workspace 2'
-alt-3 = 'workspace 3'
-alt-4 = 'workspace 4'
-alt-5 = 'workspace 5'
-alt-6 = 'workspace 6'
-alt-7 = 'workspace 7'
-alt-8 = 'workspace 8'
-alt-9 = 'workspace 9'
-
-# Move window to workspace
-alt-shift-1 = 'move-node-to-workspace 1'
-alt-shift-2 = 'move-node-to-workspace 2'
-alt-shift-3 = 'move-node-to-workspace 3'
-alt-shift-4 = 'move-node-to-workspace 4'
-alt-shift-5 = 'move-node-to-workspace 5'
-alt-shift-6 = 'move-node-to-workspace 6'
-alt-shift-7 = 'move-node-to-workspace 7'
-alt-shift-8 = 'move-node-to-workspace 8'
-alt-shift-9 = 'move-node-to-workspace 9'
-
-alt-tab = 'workspace-back-and-forth'
-
-alt-shift-semicolon = 'mode service'
-
-[mode.service.binding]
-esc = ['reload-config', 'mode main']
-r = ['flatten-workspace-tree', 'mode main']
-f = ['layout floating tiling', 'mode main']</pre>
+  <footer>Catppuccin Mocha &middot; static reference, edit the repo to change behavior</footer>
+</div>
 </body>
 </html>

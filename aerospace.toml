@@ -29,10 +29,6 @@ persistent-workspaces = [
     'I', 'M', 'O', 'P', 'U',
 ]
 
-on-mode-changed = [
-    'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar --trigger aerospace_mode_change',
-]
-
 [key-mapping]
 preset = 'qwerty'
 
@@ -41,7 +37,7 @@ inner.horizontal = 0
 inner.vertical = 0
 outer.left = 0
 outer.bottom = 0
-outer.top = [{ monitor."studio" = 30 }, { monitor."built-in" = 0 }, 0]
+outer.top = [{ monitor."studio" = 40 }, 40]
 outer.right = 0
 
 [mode.main.binding]
@@ -50,6 +46,7 @@ outer.right = 0
 alt-slash = 'layout tiles horizontal vertical'
 alt-comma = 'layout accordion horizontal vertical'
 alt-f = 'layout floating tiling'
+alt-shift-f = 'fullscreen'
 
 # Focus
 alt-h = 'focus left'
@@ -111,17 +108,23 @@ alt-shift-u = 'move-node-to-workspace U'
 
 alt-tab = 'workspace-back-and-forth'
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
-alt-shift-semicolon = 'mode service'
+
+# Entering service mode: SketchyBar's on-mode-changed callback doesn't tell us
+# which mode we entered, so tell it explicitly via MODE=service.
+alt-shift-semicolon = ['mode service', 'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar --trigger aerospace_mode_change MODE=service']
 
 [mode.service.binding]
-esc = ['reload-config', 'mode main']
-r = ['flatten-workspace-tree', 'mode main']
-f = ['layout floating tiling', 'mode main']
-backspace = ['close-all-windows-but-current', 'mode main']
-alt-shift-h = ['join-with left', 'mode main']
-alt-shift-j = ['join-with down', 'mode main']
-alt-shift-k = ['join-with up', 'mode main']
-alt-shift-l = ['join-with right', 'mode main']
+# Every binding that returns to main mode also notifies SketchyBar via
+# MODE=main, for the same reason as above.
+esc = ['reload-config', 'mode main', 'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar --trigger aerospace_mode_change MODE=main']
+r = ['flatten-workspace-tree', 'mode main', 'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar --trigger aerospace_mode_change MODE=main']
+f = ['layout floating tiling', 'mode main', 'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar --trigger aerospace_mode_change MODE=main']
+b = ['balance-sizes', 'mode main', 'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar --trigger aerospace_mode_change MODE=main']
+backspace = ['close-all-windows-but-current', 'mode main', 'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar --trigger aerospace_mode_change MODE=main']
+alt-shift-h = ['join-with left', 'mode main', 'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar --trigger aerospace_mode_change MODE=main']
+alt-shift-j = ['join-with down', 'mode main', 'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar --trigger aerospace_mode_change MODE=main']
+alt-shift-k = ['join-with up', 'mode main', 'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar --trigger aerospace_mode_change MODE=main']
+alt-shift-l = ['join-with right', 'mode main', 'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar --trigger aerospace_mode_change MODE=main']
 
 # Primary workspaces
 [[on-window-detected]]
