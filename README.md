@@ -38,6 +38,8 @@ anything below.
 | ----------------- | ------------------- |
 | `alt h/j/k/l`      | Focus left/down/up/right |
 | `alt-shift h/j/k/l`| Move window left/down/up/right |
+| `alt left/right`   | Focus the other monitor |
+| `alt-shift left/right` | Send window to the other monitor |
 
 ### Layout
 
