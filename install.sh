@@ -39,6 +39,7 @@ link_config() {
 echo "==> Linking configs into ~/.config"
 link_config "$REPO_DIR/aerospace.toml" "$HOME/.config/aerospace/aerospace.toml"
 link_config "$REPO_DIR/sketchybar" "$HOME/.config/sketchybar"
+link_config "$REPO_DIR/ghostty" "$HOME/.config/ghostty"
 
 echo "==> Making plugin scripts executable"
 chmod +x "$REPO_DIR"/sketchybar/plugins/*.sh

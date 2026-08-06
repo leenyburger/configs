@@ -1,0 +1,4 @@
+# Config
+theme = Atom One Light
+unfocused-split-opacity = 0.4
+keybind = cmd+shift+r=prompt_surface_title

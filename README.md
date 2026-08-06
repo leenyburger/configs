@@ -11,8 +11,8 @@ Colleen's macOS window-management setup: [AeroSpace](https://github.com/nikitabo
 ./install.sh
 ```
 
-This installs the Homebrew packages, symlinks `aerospace.toml` and
-`sketchybar/` into `~/.config`, makes the plugin scripts executable, starts
+This installs the Homebrew packages, symlinks `aerospace.toml`, `sketchybar/`,
+and `ghostty/` into `~/.config`, makes the plugin scripts executable, starts
 SketchyBar, and launches AeroSpace. It's safe to re-run — existing configs
 that aren't already symlinks get backed up to `*.bak` instead of overwritten.
 
