@@ -71,7 +71,6 @@ anything below.
 | `alt-8`     | 8         | Claude                        |
 | `alt-9`     | 9         | Spotify                       |
 | `alt-i`     | I         | Terminal (Ghostty) + Cursor   |
-| `alt-m`     | M         | —                             |
 | `alt-m`     | M         | Pages (either monitor — move it with `alt-shift-tab`) |
 | `alt-o`     | O         | Notion                        |
 | `alt-p`     | P         | Browser (Chrome)              |
