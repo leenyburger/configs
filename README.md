@@ -70,7 +70,8 @@ anything below.
 | `alt-9`     | 9         | Spotify                       |
 | `alt-i`     | I         | Terminal (Ghostty) + Cursor   |
 | `alt-m`     | M         | —                             |
-| `alt-o`     | O         | Notion + Pages (notes)        |
+| `alt-m`     | M         | Pages (either monitor — move it with `alt-shift-tab`) |
+| `alt-o`     | O         | Notion                        |
 | `alt-p`     | P         | Browser (Chrome)              |
 | `alt-u`     | U         | —                             |
 
