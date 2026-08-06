@@ -129,17 +129,14 @@ alt-shift-l = ['join-with right', 'mode main', 'exec-and-forget /opt/homebrew/op
 # Primary workspaces
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
-if.during-aerospace-startup = true
 run = ['move-node-to-workspace I', 'move left']
 
 [[on-window-detected]]
 if.app-name-regex-substring = 'Cursor'
-if.during-aerospace-startup = true
 run = ['move-node-to-workspace I', 'move right']
 
 [[on-window-detected]]
 if.app-id = 'com.google.Chrome'
-if.during-aerospace-startup = true
 run = ['move-node-to-workspace P']
 
 [[on-window-detected]]
