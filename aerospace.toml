@@ -57,8 +57,8 @@ alt-l = 'focus right'
 # Monitors (arrow keys): plain = look there, shift = send the window there
 alt-left = 'focus-monitor --wrap-around left'
 alt-right = 'focus-monitor --wrap-around right'
-alt-shift-left = 'move-node-to-monitor --wrap-around left'
-alt-shift-right = 'move-node-to-monitor --wrap-around right'
+alt-shift-left = 'move-node-to-monitor --wrap-around --focus-follows-window left'
+alt-shift-right = 'move-node-to-monitor --wrap-around --focus-follows-window right'
 
 # Move windows
 alt-shift-h = 'move left'
