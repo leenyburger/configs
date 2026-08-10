@@ -63,7 +63,7 @@ anything below.
 | ----------- | --------- | ---------------------------- |
 | `alt-1`     | 1         | Linear                       |
 | `alt-2`     | 2         | —                             |
-| `alt-3`     | 3         | —                             |
+| `alt-3`     | 3         | Spark email (personal machine) |
 | `alt-4`     | 4         | Zoom (main monitor)           |
 | `alt-5`     | 5         | —                             |
 | `alt-6`     | 6         | —                             |

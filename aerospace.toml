@@ -160,6 +160,11 @@ run = ['move-node-to-workspace M']
 if.app-name-regex-substring = 'Linear'
 run = ['move-node-to-workspace 1']
 
+# Spark email (personal machine only; not installed on the work Mac)
+[[on-window-detected]]
+if.app-id = 'com.readdle.SparkDesktop'
+run = ['move-node-to-workspace 3']
+
 [[on-window-detected]]
 if.app-name-regex-substring = 'Zoom'
 run = ['move-node-to-workspace 4']
