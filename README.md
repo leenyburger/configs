@@ -66,7 +66,7 @@ anything below.
 | `alt-3`     | 3         | Spark email (personal machine) |
 | `alt-4`     | 4         | Zoom (main monitor)           |
 | `alt-5`     | 5         | —                             |
-| `alt-6`     | 6         | —                             |
+| `alt-6`     | 6         | Telegram (personal machine)   |
 | `alt-7`     | 7         | Slack                         |
 | `alt-8`     | 8         | Claude                        |
 | `alt-9`     | 9         | Spotify                       |

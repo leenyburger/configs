@@ -165,6 +165,11 @@ run = ['move-node-to-workspace 1']
 if.app-id = 'com.readdle.SparkDesktop'
 run = ['move-node-to-workspace 3']
 
+# Telegram (personal machine only)
+[[on-window-detected]]
+if.app-id = 'ru.keepcoder.Telegram'
+run = ['move-node-to-workspace 6']
+
 [[on-window-detected]]
 if.app-name-regex-substring = 'Zoom'
 run = ['move-node-to-workspace 4']
