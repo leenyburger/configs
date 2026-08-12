@@ -68,7 +68,7 @@ anything below.
 | `alt-5`     | 5         | —                             |
 | `alt-6`     | 6         | Telegram (personal machine)   |
 | `alt-7`     | 7         | Slack                         |
-| `alt-8`     | 8         | Claude                        |
+| `alt-8`     | 8         | Claude (main monitor)         |
 | `alt-9`     | 9         | Spotify                       |
 | `alt-i`     | I         | Terminal (Ghostty) + Cursor   |
 | `alt-m`     | M         | Pages (either monitor — move it with `alt-shift-tab`) |

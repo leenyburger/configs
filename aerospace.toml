@@ -201,6 +201,6 @@ run = [
 [workspace-to-monitor-force-assignment]
 4 = 'main'
 7 = ['secondary', 'built-in']
-8 = ['secondary', 'built-in']
+8 = 'main'
 9 = ['secondary', 'built-in']
 U = ['secondary', 'built-in']
