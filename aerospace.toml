@@ -170,6 +170,11 @@ run = ['move-node-to-workspace 3']
 if.app-id = 'ru.keepcoder.Telegram'
 run = ['move-node-to-workspace 6']
 
+# Apple Calendar, next to email on 3
+[[on-window-detected]]
+if.app-id = 'com.apple.iCal'
+run = ['move-node-to-workspace 2']
+
 [[on-window-detected]]
 if.app-name-regex-substring = 'Zoom'
 run = ['move-node-to-workspace 4']
