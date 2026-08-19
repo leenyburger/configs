@@ -1,0 +1,99 @@
+{
+    "window.commandCenter": 1,
+    "editor.multiCursorModifier": "alt",
+    "[ruby]": {
+    },
+    "tailwindCSS.includeLanguages": {
+        "javascript": "javascript",
+        "html": "html",
+        "erb": "html"
+    },
+    "tailwindCSS.experimental.classRegex": [
+        "class: \"|'([^\"|']*)"
+    ],
+    "solargraph.commandPath": "/Users/colleenschnettler/.rbenv/shims/solargraph",
+    "solargraph.formatting": false,
+    "ruby.intellisense": "rubyLocate",
+    "vim.smartRelativeLine": true,
+    "editor.cursorSurroundingLines": 8,
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.color": "#a9dc7660",
+    "vim.highlightedyank.duration": 250,
+    "vim.useSystemClipboard": true,
+    "rubyLsp.rubyVersionManager": {
+        "identifier": "rbenv"
+    },
+    "rubyLsp.formatter": "standard",
+    "rubyLsp.enabledFeatures": {
+        "codeActions": true,
+        "diagnostics": false,
+        "documentHighlights": true,
+        "documentLink": true,
+        "documentSymbols": true,
+        "foldingRanges": true,
+        "formatting": true,
+        "hover": true,
+        "inlayHint": true,
+        "onTypeFormatting": true,
+        "selectionRanges": false,
+        "semanticHighlighting": true,
+        "completion": true,
+        "codeLens": true,
+        "definition": true,
+        "workspaceSymbol": true,
+        "signatureHelp": true
+    },
+    "editor.guides.indentation": false,
+    "editor.bracketPairColorization.enabled": true,
+    "window.zoomLevel": 0,
+    "rainbowTags.allowEverywhere": true,
+    "[erb]": {
+        "editor.defaultFormatter": "aliariff.vscode-erb-beautify",
+    },
+    "files.associations": {
+        "*.html.erb": "erb"
+    },
+    "cursor.cpp.disabledLanguages": [
+        "plaintext",
+        "markdown",
+        "scminput"
+    ],
+    "[gemfile]": {
+        "editor.defaultFormatter": "testdouble.vscode-standard-ruby"
+    },
+    "markdownConverter.ConversionType": [
+        "HTML"
+    ],
+    "editor.minimap.enabled": true,
+    "github.copilot.editor.enableAutoCompletions": true,
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    "vim.autoindent": false,
+    "workbench.settings.applyToAllProfiles": [],
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.inlineSuggest.enabled": false,
+    "editor.inlineSuggest.showToolbar": "never",
+    "editor.hover.enabled": "off",
+    "editor.parameterHints.enabled": false,
+    "cursor.cmdk.autoSelect": false,
+    "cursor.cmdk.useThemedDiffBackground": true,
+    "search.exclude": {
+        "**/*.log": true
+    },
+    "editor.tabSize": 2, 
+    "editor.formatOnSave": false,
+    "windsurf.autocompleteSpeed": "fast",
+    "workbench.colorTheme": "JetBrains New Dark",
+    "accessibility.signals.chatEditModifiedFile": {
+        "sound": "off"
+    },
+    "accessibility.signalOptions.volume": 0,
+    "editor.accessibilitySupport": "off",
+    "geminicodeassist.displayInlineContextHint": false,
+    "windsurf.completionMode": "off"
+}

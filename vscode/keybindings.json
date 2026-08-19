@@ -1,0 +1,34 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "ctrl+=",
+        "command": "editor.action.fontZoomIn"
+    },
+    {
+        "key": "ctrl+-",
+        "command": "editor.action.fontZoomOut"
+    },
+    // Prioritize Copilot (GPT-4) suggestions with the Tab key
+    {
+        "key": "tab",
+        "command": "editor.action.inlineSuggest.commit",
+        "when": "inlineSuggestionVisible"
+    },
+    {
+        "key": "tab",
+        "command": "acceptSelectedSuggestion",
+        "when": "suggestWidgetVisible && !inlineSuggestionVisible && editorTextFocus"
+    },
+    {
+        "key": "shift+cmd+numpad4",
+        "command": "editor.action.enableCppGlobally"
+    },
+    {
+        "key": "shift+cmd+numpad5",
+        "command": "editor.cpp.disableenabled"
+    },
+    {
+        "key": "cmd+k",
+        "command": "windsurf.prioritized.command.open"
+    }
+]
