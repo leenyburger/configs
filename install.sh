@@ -45,7 +45,6 @@ echo "==> Linking configs into ~/.config"
 link_config "$REPO_DIR/aerospace.toml" "$HOME/.config/aerospace/aerospace.toml"
 link_config "$REPO_DIR/sketchybar" "$HOME/.config/sketchybar"
 link_config "$REPO_DIR/ghostty" "$HOME/.config/ghostty"
-link_config "$REPO_DIR/claude/CLAUDE.md" "$HOME/.claude/CLAUDE.md"
 link_config "$REPO_DIR/vim/vimrc" "$HOME/.vimrc"
 
 echo "==> Making plugin scripts executable"
