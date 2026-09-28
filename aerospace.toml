@@ -26,7 +26,7 @@ automatically-unhide-macos-hidden-apps = true
 
 persistent-workspaces = [
     '1', '2', '3', '4', '5', '6', '7', '8', '9',
-    'I', 'M', 'O', 'P', 'U',
+    'I', 'M', 'N', 'O', 'P', 'U',
 ]
 
 [key-mapping]
@@ -90,6 +90,7 @@ alt-9 = 'workspace 9'
 # Letter workspaces from the friend's setup
 alt-i = 'workspace I'
 alt-m = 'workspace M'
+alt-n = 'workspace N'
 alt-o = 'workspace O'
 alt-p = 'workspace P'
 alt-u = 'workspace U'
@@ -108,8 +109,11 @@ alt-shift-9 = 'move-node-to-workspace 9'
 # Move windows to letter workspaces
 alt-shift-i = 'move-node-to-workspace I'
 alt-shift-m = 'move-node-to-workspace M'
+alt-shift-n = 'move-node-to-workspace N'
 alt-shift-o = 'move-node-to-workspace O'
 alt-shift-p = 'move-node-to-workspace P'
+# U is the backup coding spot for overflow Ghostty/Cursor windows; moved here
+# manually, no auto-routing rule sends anything to it.
 alt-shift-u = 'move-node-to-workspace U'
 
 alt-tab = 'workspace-back-and-forth'
@@ -149,11 +153,17 @@ run = ['move-node-to-workspace P']
 if.app-name-regex-substring = 'Notion'
 run = ['move-node-to-workspace O']
 
+# Music is pinned to the secondary/built-in monitor (see force-assignment below).
+[[on-window-detected]]
+if.app-id = 'com.apple.Music'
+run = ['move-node-to-workspace M']
+
 # Pages gets its own workspace (unpinned) so it can live on either monitor;
-# use alt-shift-tab to throw it between screens.
+# N sits next to M in the right-hand letter cluster. Use alt-shift-tab to
+# throw it between screens.
 [[on-window-detected]]
 if.app-id = 'com.apple.iWork.Pages'
-run = ['move-node-to-workspace M']
+run = ['move-node-to-workspace N']
 
 # Supporting apps
 [[on-window-detected]]
@@ -187,8 +197,9 @@ run = ['move-node-to-workspace 7']
 if.app-name-regex-substring = 'Claude'
 run = ['move-node-to-workspace 8']
 
+# Grok Bot, paired with Claude on 8.
 [[on-window-detected]]
-if.app-id = 'com.spotify.client'
+if.app-id = 'com.anysphere.sand'
 run = ['move-node-to-workspace 9']
 
 [[on-window-detected]]
@@ -205,7 +216,9 @@ run = [
 # Multi-monitor layout: comms/music on the small screen, Zoom on the main one.
 [workspace-to-monitor-force-assignment]
 4 = 'main'
+I = 'main'
 7 = ['secondary', 'built-in']
 8 = 'main'
 9 = ['secondary', 'built-in']
+M = ['secondary', 'built-in']
 U = ['secondary', 'built-in']

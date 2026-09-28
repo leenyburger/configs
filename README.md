@@ -69,12 +69,13 @@ anything below.
 | `alt-6`     | 6         | Telegram (personal machine)   |
 | `alt-7`     | 7         | Slack                         |
 | `alt-8`     | 8         | Claude (main monitor)         |
-| `alt-9`     | 9         | Spotify                       |
+| `alt-9`     | 9         | Grok Bot (paired with Claude on 8) |
 | `alt-i`     | I         | Terminal (Ghostty) + Cursor   |
-| `alt-m`     | M         | Pages (either monitor — move it with `alt-shift-tab`) |
+| `alt-m`     | M         | Music (locked to secondary/built-in monitor) |
+| `alt-n`     | N         | Pages (either monitor — move it with `alt-shift-tab`) |
 | `alt-o`     | O         | Notion                        |
 | `alt-p`     | P         | Browser (Chrome)              |
-| `alt-u`     | U         | —                             |
+| `alt-u`     | U         | Backup coding spot for overflow Ghostty/Cursor windows (moved manually) |
 
 `alt-shift-<key>` moves the focused window to that workspace instead of
 switching to it (e.g. `alt-shift-1` moves the window to workspace 1).
