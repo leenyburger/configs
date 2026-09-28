@@ -162,7 +162,7 @@ run = ['move-node-to-workspace M']
 # N sits next to M in the right-hand letter cluster. Use alt-shift-tab to
 # throw it between screens.
 [[on-window-detected]]
-if.app-id = 'com.apple.iWork.Pages'
+if.app-id = 'com.apple.Pages'
 run = ['move-node-to-workspace N']
 
 # Supporting apps
